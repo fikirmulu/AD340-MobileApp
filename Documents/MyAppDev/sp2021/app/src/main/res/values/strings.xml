@@ -3,4 +3,6 @@
     <string name="button_send">button_send</string>
     <string name="name">Name</string>
     <string name="TRAFFIC">Button</string>
+    <string name="movie_director">Movie Director</string>
+    <string name="Movie_Images">Movie_Images</string>
 </resources>
