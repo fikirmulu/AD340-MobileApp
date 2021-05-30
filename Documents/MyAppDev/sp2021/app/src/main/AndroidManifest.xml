@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:name=".MoviesListActivity"
-            android:label=".Recycler"
+            android:label="Movies List"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

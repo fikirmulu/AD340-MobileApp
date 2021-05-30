@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
 
                     val intent = Intent(this, MoviesListActivity::class.java)
 
-
                     startActivity(intent)
                 }
                 val btnParks= findViewById<Button>(R.id.btnParks)
