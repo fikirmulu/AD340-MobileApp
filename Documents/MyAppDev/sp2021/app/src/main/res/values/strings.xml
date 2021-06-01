@@ -6,4 +6,7 @@
     <string name="movie_director">Movie Director</string>
     <string name="Movie_Images">Movie_Images</string>
     <string name="title_bar">title_bar</string>
+    <string name="textview">TextView</string>
+
+
 </resources>

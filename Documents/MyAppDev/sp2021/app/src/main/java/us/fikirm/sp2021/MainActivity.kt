@@ -2,6 +2,7 @@ package us.fikirm.sp2021
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -10,15 +11,16 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
-        /*fun MoviesListActivity(view: View?) {
+        fun MoviesListActivity(view: View?) {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-        }*/
+        }
 
                 /*val EnterName = findViewById(R.id.EnterName) as EditText
                 val btnInfo= findViewById<Button>(R.id.btnInfo)
@@ -32,11 +34,12 @@ class MainActivity : AppCompatActivity() {
                 }
                 val btnMovies= findViewById<Button>(R.id.btnMovies)
                 btnMovies.setOnClickListener {
-                    Toast.makeText(this,"Zombie Movies",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,"Zombie Movies",Toast.LENGTH_SHORT).show()
 
                     val intent = Intent(this, MoviesListActivity::class.java)
 
                     startActivity(intent)
+
                 }
                 val btnParks= findViewById<Button>(R.id.btnParks)
                 btnParks.setOnClickListener {
@@ -57,7 +60,7 @@ class MainActivity : AppCompatActivity() {
             }
 
     companion object {
-        const val EXTRA_MESSAGE = "us.fikirm.sp2021.MESSAGE"
+       const val EXTRA_MESSAGE = "us.fikirm.sp2021.MESSAGE"
     }
 }
 

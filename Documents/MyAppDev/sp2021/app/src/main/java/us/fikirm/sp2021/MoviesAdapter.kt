@@ -13,14 +13,14 @@ import com.squareup.picasso.Picasso
 //internal class MoviesAdapter(private val showMovie: (pos: Int) -> Unit) :
     //RecyclerView.Adapter<MoviesAdapter.ViewHolder>()
 
-internal class MoviesAdapter(private val movies: Array<Array<String>>, private val listener: OnItemClickListener): RecyclerView.Adapter<MoviesAdapter.ViewHolder>(){
-    internal inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
-        View.OnClickListener {
+class MoviesAdapter(private val movies: Array<Array<String>>, private val listener: OnItemClickListener): RecyclerView.Adapter<MoviesAdapter.ViewHolder>(){
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),View.OnClickListener {
+
         var titleText: TextView = itemView.findViewById(R.id.title)
         var yearText: TextView = itemView.findViewById(R.id.year)
         //var director: TextView = itemView.findViewById(R.id.director)
-        //val movieimage: ImageView = itemView.findViewById(R.id.movie_image)
-        //val description: TextView = itemView.findViewById(R.id.description)
+        //val movieimage: ImageView = itemView.findViewById(R.id.Image)
+        //val description: TextView = itemView.findViewById(R.id.Description)
 
         init {
             itemView.setOnClickListener(this)
@@ -43,10 +43,11 @@ internal class MoviesAdapter(private val movies: Array<Array<String>>, private v
     }
 
     interface OnItemClickListener {
+
         //fun onItemClick(position: Int)
         fun MovieDetails(position: Int)
     }
-    //@NonNull
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesAdapter.ViewHolder {
         val context = parent.context
         val inflater = LayoutInflater.from(context)
@@ -59,14 +60,6 @@ internal class MoviesAdapter(private val movies: Array<Array<String>>, private v
     override fun onBindViewHolder(holder: MoviesAdapter.ViewHolder, position: Int) {
         val movie = movies[position]
 
-        /*holder.title.text = movie[0]
-        holder.year.text = movie[1]
-        holder.director.text = movie[2]
-        Picasso.get().load(movie[3]).into(holder.movieimage)
-
-
-        holder.itemView.isClickable = true
-        holder.itemView.isFocusableInTouchMode = true*/
 
         val titleText = holder.titleText
         val yearText = holder.yearText
