@@ -22,6 +22,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        fun Traffic(view: View?) {
+            val intent = Intent(this, TrafficActivity::class.java)
+            startActivity(intent)
+        }
                 /*val EnterName = findViewById(R.id.EnterName) as EditText
                 val btnInfo= findViewById<Button>(R.id.btnInfo)
                 btnInfo.setOnClickListener {
@@ -48,6 +52,10 @@ class MainActivity : AppCompatActivity() {
                 val btnTraffic= findViewById<Button>(R.id.btnTraffic)
                 btnTraffic.setOnClickListener {
                     Toast.makeText(this,"Stop!",Toast.LENGTH_LONG).show()
+
+                    val intent = Intent(this, TrafficActivity::class.java)
+
+                    startActivity(intent)
                 }
             val btnMusic= findViewById<Button>(R.id.btnMusic)
             btnMusic.setOnClickListener {
