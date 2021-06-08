@@ -26,6 +26,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, TrafficActivity::class.java)
             startActivity(intent)
         }
+
+        fun Map(view: View?) {
+            val intent = Intent(this, MapActivity::class.java)
+            startActivity(intent)
+        }
                 /*val EnterName = findViewById(R.id.EnterName) as EditText
                 val btnInfo= findViewById<Button>(R.id.btnInfo)
                 btnInfo.setOnClickListener {
@@ -45,9 +50,12 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
 
                 }
-                val btnParks= findViewById<Button>(R.id.btnParks)
-                btnParks.setOnClickListener {
-                    Toast.makeText(this,"Seward Park",Toast.LENGTH_LONG).show()
+                val btnMap= findViewById<Button>(R.id.btnMap)
+                btnMap.setOnClickListener {
+                    Toast.makeText(this,"Seattle Central",Toast.LENGTH_LONG).show()
+                    val intent = Intent(this, MapActivity::class.java)
+
+                    startActivity(intent)
                 }
                 val btnTraffic= findViewById<Button>(R.id.btnTraffic)
                 btnTraffic.setOnClickListener {
