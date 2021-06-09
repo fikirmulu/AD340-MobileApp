@@ -60,10 +60,8 @@ class MapActivity: AppCompatActivity(), OnMapReadyCallback {
 
     }
 
-    val PERMISSION_REQUEST_LOCATION: Int
-        get() {
-            TODO()
-        }
+    val PERMISSION_REQUEST_LOCATION: Int = 0
+
 
     @SuppressLint("MissingPermission")
     private fun checkLocationPermission() {
@@ -215,5 +213,6 @@ class MapActivity: AppCompatActivity(), OnMapReadyCallback {
 
 
     }
+
 
 }
