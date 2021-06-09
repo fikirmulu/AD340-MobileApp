@@ -60,7 +60,10 @@ class MapActivity: AppCompatActivity(), OnMapReadyCallback {
 
     }
 
-    val PERMISSION_REQUEST_LOCATION = 9
+    val PERMISSION_REQUEST_LOCATION: Int
+        get() {
+            TODO()
+        }
 
     @SuppressLint("MissingPermission")
     private fun checkLocationPermission() {
@@ -76,8 +79,8 @@ class MapActivity: AppCompatActivity(), OnMapReadyCallback {
 
                     if (location == null) {
                         val tmpLocation = Location(LocationManager.GPS_PROVIDER)
-                        tmpLocation.latitude = 47.82395
-                        tmpLocation.longitude = -122.29243
+                        tmpLocation.latitude = 47.5123
+                        tmpLocation.longitude = -122.2640
                         updateMap(tmpLocation)
                     }
 
@@ -212,8 +215,5 @@ class MapActivity: AppCompatActivity(), OnMapReadyCallback {
 
 
     }
-    /*companion object {
-        var dataUrl = " https://web6.seattle.gov/Travelers/api/Map/Data?zoomId=13&type=2"
 
-    }*/
 }
