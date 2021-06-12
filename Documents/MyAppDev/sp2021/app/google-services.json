@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "293262671273",
+    "firebase_url": "https://firebase.google.com/project/ad-340/firestore",
+    "project_id": "ad-340",
+    "storage_bucket": "ad-340.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293262671273:android:fba0b1fd098080452a18b8",
+        "android_client_info": {
+          "package_name": "us.fikirm.sp2021"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293262671273-qe9j2j1j373ka7l3m2m7iioon3anv09p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvMD1G4-l9ahX0r9Jwb-1W3sohJA1-6NY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293262671273-qe9j2j1j373ka7l3m2m7iioon3anv09p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

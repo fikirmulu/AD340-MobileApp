@@ -37,6 +37,15 @@
         </activity>
 
         <activity
+            android:name=".FirebaseActivity"
+            android:label="Team Access"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity
             android:name=".TrafficActivity"
             android:label="Traffic Cameras"
             android:parentActivityName=".MainActivity">
