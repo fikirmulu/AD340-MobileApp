@@ -34,7 +34,7 @@ class MoviesAdapter(private val movies: Array<Array<String>>, private val listen
         }*/
 
         override fun onClick(v: View?) {
-            var bindingAdapterPosition =0
+
             val position = bindingAdapterPosition
             if (position != RecyclerView.NO_POSITION) {
                 listener.MovieDetails(position)

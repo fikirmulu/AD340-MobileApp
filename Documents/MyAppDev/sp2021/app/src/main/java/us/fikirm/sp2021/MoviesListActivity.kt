@@ -17,7 +17,7 @@ class MoviesListActivity : AppCompatActivity(), MoviesAdapter.OnItemClickListene
 
 
             // Lookup the recyclerview in activity layout
-            val MoviesList = findViewById<View>(R.id.MoviesList) as RecyclerView
+            val MoviesList = findViewById<View>(R.id.button1) as RecyclerView
 
 
             // Initialize movies

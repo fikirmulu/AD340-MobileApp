@@ -1,5 +1,6 @@
 package us.fikirm.sp2021
 
+
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE)
 
         mNameField = findViewById(R.id.EnterName)
@@ -37,10 +39,15 @@ class MainActivity : AppCompatActivity() {
         mNameField.setText(mPreferences.getString("name", "nametest"))
         mEmailField.setText(mPreferences.getString("email", "emailtest"))
         mPassword.setText(mPreferences.getString("password", "passtest"))
+    }
 
+        fun logIn(view: View?) {
+            Log.d("FIREBASE", "click")
+            signIn()
+        }
 
-        fun MoviesListActivity(view: View?) {
-            val intent = Intent(this, MainActivity::class.java)
+        fun MoviesList(view: View?) {
+            val intent = Intent(this, MoviesListActivity::class.java)
             startActivity(intent)
         }
 
@@ -53,53 +60,15 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MapActivity::class.java)
             startActivity(intent)
         }
-        /*val EnterName = findViewById(R.id.EnterName) as EditText
-                val btnInfo= findViewById<Button>(R.id.btnInfo)
-                btnInfo.setOnClickListener {
-                    Toast.makeText(this,"Sent!",Toast.LENGTH_LONG).show()
-                }*/
 
-        val btnCities = findViewById<Button>(R.id.btnCities)
-        btnCities.setOnClickListener {
-            Toast.makeText(this, "Beautiful Seattle", Toast.LENGTH_LONG).show()
-        }
-        val btnMovies = findViewById<Button>(R.id.btnMovies)
-        btnMovies.setOnClickListener {
-            Toast.makeText(this, "Zombie Movies", Toast.LENGTH_SHORT).show()
+    fun showText(view: View) {
+        //val button: Button = findViewById(R.id.gButton1)
+        val button = view as Button
+        val context = applicationContext
+        val duration = Toast.LENGTH_SHORT
+        val text = button.text
 
-            val intent = Intent(this, MoviesListActivity::class.java)
-
-            startActivity(intent)
-
-        }
-        val btnMap = findViewById<Button>(R.id.btnMap)
-        btnMap.setOnClickListener {
-            Toast.makeText(this, "Seattle Central", Toast.LENGTH_LONG).show()
-            val intent = Intent(this, MapActivity::class.java)
-
-            startActivity(intent)
-        }
-        val btnTraffic = findViewById<Button>(R.id.btnTraffic)
-        btnTraffic.setOnClickListener {
-            Toast.makeText(this, "Stop!", Toast.LENGTH_LONG).show()
-
-            val intent = Intent(this, TrafficActivity::class.java)
-
-            startActivity(intent)
-        }
-        val btnMusic = findViewById<Button>(R.id.btnMusic)
-        btnMusic.setOnClickListener {
-            Toast.makeText(this, "country Music", Toast.LENGTH_LONG).show()
-        }
-        val btnFood = findViewById<Button>(R.id.btnFood)
-        btnFood.setOnClickListener {
-            Toast.makeText(this, "Chicken Stew", Toast.LENGTH_LONG).show()
-        }
-    }
-
-    fun logIn(view: View?) {
-        Log.d("FIREBASE", "click")
-        signIn()
+        val btntext = Toast.makeText(context, text, duration).show()
     }
 
     fun validateLogin(name: String, email: String, password: String): Boolean {
@@ -143,6 +112,7 @@ class MainActivity : AppCompatActivity() {
         mPreferences.edit(true) { putString("password", password) }
 
         // 3 - sign into Firebase
+
         val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
         mAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
@@ -179,7 +149,8 @@ class MainActivity : AppCompatActivity() {
         companion object {
             const val EXTRA_MESSAGE = "us.fikirm.sp2021.MESSAGE"
         }
-    }
+
+}
 
 
 

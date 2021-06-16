@@ -2,7 +2,7 @@
     <string name="app_name">MyAppDev</string>
     <string name="button_send">button_send</string>
     <string name="name">Fikirte </string>
-    <string name="TRAFFIC">Button</string>
+    <string name="TRAFFIC">TRAFFIC</string>
     <string name="movie_director">Movie Director</string>
     <string name="Movie_Images">Movie_Images</string>
     <string name="title_bar">title_bar</string>
@@ -14,5 +14,13 @@
     <string name="pick_place">Choose a place</string>
     <string name="email">email</string>
     <string name="password">password</string>
+
+    <string name="maps">MAPS</string>
+    <string name="btnInfo">btnInfo</string>
+
+    <string name="MOVIES">MOVIES</string>
+    <string name="MAPS">MAPS</string>
+    <string name="LOGIN">LOGIN</string>
+    <string name="SignIn">signin</string>
 
 </resources>
