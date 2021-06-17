@@ -22,5 +22,6 @@
     <string name="MAPS">MAPS</string>
     <string name="LOGIN">LOGIN</string>
     <string name="SignIn">signin</string>
+    <string name="enter_name">enter_name</string>
 
 </resources>

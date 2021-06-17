@@ -15,9 +15,10 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        android:autofillHints="@string/enter_name"
         android:ems="10"
+        android:hint="@string/enter_name"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toStartOf="@+id/btnInfo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -66,7 +67,8 @@
         android:text="@string/LOGIN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/EnterName"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
 
     <Button
         android:id="@+id/button1"
@@ -76,7 +78,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        android:onClick="MoviesList"
+        android:onClick="moviesList"
         android:text="@string/MOVIES"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toStartOf="@+id/button2"
@@ -94,7 +96,7 @@
         android:layout_marginTop="150dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="24dp"
-        android:onClick="Traffic"
+        android:onClick="traffic"
         android:text="@string/TRAFFIC"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"

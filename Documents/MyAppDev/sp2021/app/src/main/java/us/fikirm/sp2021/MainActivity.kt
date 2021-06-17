@@ -46,12 +46,12 @@ class MainActivity : AppCompatActivity() {
             signIn()
         }
 
-        fun MoviesList(view: View?) {
+        fun moviesList(view: View?) {
             val intent = Intent(this, MoviesListActivity::class.java)
             startActivity(intent)
         }
 
-        fun Traffic(view: View?) {
+        fun traffic(view: View?) {
             val intent = Intent(this, TrafficActivity::class.java)
             startActivity(intent)
         }
@@ -62,13 +62,13 @@ class MainActivity : AppCompatActivity() {
         }
 
     fun showText(view: View) {
-        //val button: Button = findViewById(R.id.gButton1)
+        //val button: Button = findViewById(R.id.Button1)
         val button = view as Button
         val context = applicationContext
         val duration = Toast.LENGTH_SHORT
         val text = button.text
 
-        val btntext = Toast.makeText(context, text, duration).show()
+        Toast.makeText(context, text, duration).show()
     }
 
     fun validateLogin(name: String, email: String, password: String): Boolean {
